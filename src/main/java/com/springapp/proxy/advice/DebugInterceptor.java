@@ -11,7 +11,7 @@ public class DebugInterceptor implements MethodInterceptor{
 
     @Override
     public Object invoke(MethodInvocation methodInvocation) throws Throwable {
-        System.out.println("nihhao你好");
+        System.out.println("before invoke method");
         return methodInvocation.proceed();
     }
 }
