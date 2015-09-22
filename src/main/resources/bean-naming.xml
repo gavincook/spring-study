@@ -1,0 +1,9 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="simpleBean" name="simpleBean2 simpleBean3;simpleBean4,simpleBean5" class="com.springapp.SimpleBean"/>
+
+    <alias name="simpleBean2" alias="simpleBean6,simpleBean7"/>
+</beans>
