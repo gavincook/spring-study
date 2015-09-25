@@ -1,0 +1,61 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="exampleThree" class="com.springapp.dependency.ExampleThree">
+        <constructor-arg value="first"/>
+        <constructor-arg value="second"/>
+    </bean>
+
+    <bean id="exampleFive" class="com.springapp.dependency.ExampleFive">
+        <property name="exampleFour" ref="exampleFour"/>
+    </bean>
+    <bean id="exampleFour" class="com.springapp.dependency.ExampleFour">
+        <property name="exampleFive" ref="exampleFive"/>
+    </bean>
+
+    <bean id="collectionDependency" class="com.springapp.dependency.CollectionDependency">
+        <property name="list">
+            <list value-type="java.lang.String">
+                <value>first</value>
+                <value>second</value>
+                <value>third</value>
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>1</value>
+                <value>3</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="key1" value="value1"/>
+                <entry key="key2" value="value2"/>
+                <entry key="key3" value="value3"/>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="pro1">value1</prop>
+                <prop key="pro2">value2</prop>
+                <prop key="pro3">value3</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="collectionDependencyChild" parent="collectionDependency">
+        <property name="properties">
+            <!-- the merge is specified on the child collection definition -->
+            <props merge="true">
+                <prop key="pro4">value4</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
