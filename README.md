@@ -23,6 +23,8 @@
 
 * 使用其他实例的工厂方法构造，使用`<bean>`的`factory-bean`指定具体需要使用的实例，`factory-method`来指定需要调用该实例的工厂方法
 
+* 延迟初始化，`<bean>`标签的`lazy-init`属性可以指定是否需要延迟初始化. 默认情况下，spring会在启动的时候初始化所有的没有标明需要延迟初始化的`bean`. 对于标注了`lazy-init="true"`的`bean`只有在首次被使用时，才会被初始化。
+
 ### Dependencies(依赖)
 
 #### 1.依赖注入
@@ -54,7 +56,7 @@
 Spring允许定义内部bean，内部bean是匿名的，会随着外部bean的创建而创建。内部bean只能注入到外部bean，是不能注入到其他的bean中。其定义形式如下：
 ```
 <bean id="outer" class="...">
-    <!-- instead of using a reference to a target bean, simply define the target bean inline -->
+    <!-- ins  tead of using a reference to a target bean, simply define the target bean inline -->
     <property name="target">
         <bean class="com.example.Person"> <!-- this is the inner bean -->
             <property name="name" value="Fiona Apple"/>
