@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="propertyOne" class="com.springapp.dependency.autowiring.PropertyOne"/>
+
+
+    <bean id="autowiringByNameBean" class="com.springapp.dependency.autowiring.AutowiringByNameBean" autowire="byName"/>
+
+    <bean id="constructorArgOne" class="com.springapp.dependency.autowiring.ConstructorArgOne"/>
+
+    <bean id="autowiringByConstructorBean" class="com.springapp.dependency.autowiring.AutowiringByConstructorBean" autowire="constructor"/>
+
+    <bean id="autowiringByTypeBean" class="com.springapp.dependency.autowiring.AutowiringByTypeBean" autowire="byType"/>
+</beans>

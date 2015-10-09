@@ -43,3 +43,5 @@ Spring允许定义内部bean，内部bean是匿名的，会随着外部bean的�
 * 集合
  
  Spring支持`List`,`Map`,`Set`和`Properties`几种集合类型，分别用标签`<List>`,`<Map>`,`<Set>`以及`<Properties>`表示。
+
+* [自动注入](https://github.com/gavincook/spring-study/tree/master/src/main/java/com/springapp/dependency/autowiring)
