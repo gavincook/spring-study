@@ -1,4 +1,4 @@
-package com.springapp.lazy;
+package com.springapp.instantiation.lazy;
 
 /**
  * @author GavinCook

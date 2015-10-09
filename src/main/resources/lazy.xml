@@ -3,12 +3,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="lazyBean" class="com.springapp.lazy.LazyBean" lazy-init="true"/>
+    <bean id="lazyBean" class="com.springapp.instantiation.lazy.LazyBean" lazy-init="true"/>
 
-    <!--<bean class="com.springapp.lazy.LazyRelier">
+    <!--<bean class="com.springapp.instantiation.lazy.LazyRelier">
         <constructor-arg ref="lazyBean"/>
     </bean>-->
 
-    <bean class="com.springapp.lazy.ImmediateBean"/>
+    <bean class="com.springapp.instantiation.lazy.ImmediateBean"/>
 
 </beans>

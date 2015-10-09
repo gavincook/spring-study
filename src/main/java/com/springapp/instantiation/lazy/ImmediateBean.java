@@ -1,4 +1,4 @@
-package com.springapp.lazy;
+package com.springapp.instantiation.lazy;
 
 import org.springframework.beans.factory.BeanNameAware;
 
